@@ -1,0 +1,12 @@
+[ec2-user@ip-10-0-10-44 ~]$ mysql -u udacity -p -h udacity.ctui6kjeoe90.us-west-2.rds.amazonaws.com
+Enter password:
+mysql> use udacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> CREATE TABLE tutorials_tbl (column_desc varchar(100),insert_ts datetime);
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> INSERT INTO tutorials_tbl VALUES ("Learn AWS", NOW());
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql>
