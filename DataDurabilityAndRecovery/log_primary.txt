@@ -1,0 +1,20 @@
+[ec2-user@ip-10-1-10-51 ~]$ mysql -u udacity -p -h database-2.cd5zpkvzvwnv.us-west-1.rds.amazonaws.com
+Enter password:
+
+mysql> use udacity;
+Database changed
+mysql> CREATE TABLE tutorials_tbl (column_desc varchar(100),insert_ts datetime);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> INSERT INTO tutorials_tbl VALUES ("Learn AWS", NOW());
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from tutorials_tbl;
++-------------+---------------------+
+| column_desc | insert_ts           |
++-------------+---------------------+
+| Learn AWS   | 2020-06-27 09:03:24 |
++-------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql>
