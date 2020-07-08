@@ -1,7 +1,7 @@
 [ec2-user@ip-10-0-10-197 ~]$ mysql -u admin  -p -h udacity.ctui6kjeoe90.us-west-2.rds.amazonaws.com
 Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MySQL connection id is 7
+Your MySQL connection id is 4
 Server version: 5.7.26-log Source distribution
 
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
@@ -22,5 +22,15 @@ MySQL [udacity]> select * from tutorials_tbl;
 1 row in set (0.00 sec)
 
 MySQL [udacity]> INSERT INTO tutorials_tbl VALUES ("Learn AWS", NOW());
-ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+Query OK, 1 row affected (0.02 sec)
+
+MySQL [udacity]> select * from tutorials_tbl;
++-------------+---------------------+
+| column_desc | insert_ts           |
++-------------+---------------------+
+| Learn AWS   | 2020-07-08 06:20:55 |
+| Learn AWS   | 2020-07-08 06:39:56 |
++-------------+---------------------+
+2 rows in set (0.00 sec)
+
 MySQL [udacity]>
