@@ -1,4 +1,4 @@
-Minimum RTO for a single AZ outage :An RTO of 30 mins for this incident would be reasonable since We have another read replicate in different AZ .
-Minimum RTO for a single region outage :An RTO of one hour for this incident would be reasonable since we have secondary region with read replica, to do failover we need some time in different region .
-Minimum RPO for a single AZ outage:An RPO of 20 mins  should be fine since we are taking backup and snapshot of database and also We have multi AZ cluster with read replica.
-Minimum RPO for a single region outage::An RPO of 40 mins  should be fine since we are taking backup and snapshot of database and also We have multi Region cluster with read replica.
+Minimum RTO for a single AZ outage :An RTO of less then 5 mins for this incident would be reasonable since We have another read replicate in different AZ .
+Minimum RTO for a single region outage :An RTO less then 10 mins for this incident would be reasonable since we have secondary region with read replica, to do failover we need some time in different region .
+Minimum RPO for a single AZ outage:An RPO of 10 mins  should be fine since we are taking backup and snapshot of database and also We have multi AZ cluster with read replica.
+Minimum RPO for a single region outage::An RPO of 10-15 mins  should be fine since we are taking backup and snapshot of database and also We have multi Region cluster with read replica.
